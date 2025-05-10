@@ -9,14 +9,15 @@ body {
 
 /* Sezione Hero */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-bottom: 2.5px solid #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 2.5px solid #fff;
 }
 
 li a:hover {font-size:110%;}
@@ -240,5 +241,67 @@ footer .social-links img {
   }
   .footer-right {
     flex: 1 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .hero-box {
+    width: 100%;
+    padding: 20px 10px;
+    margin-top: 20px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle, .hero-desc {
+    font-size: 16px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Adattamento per mobile */
+@media (max-width: 768px) {
+    .partner-image {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+  .partner-image {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto; 
+    max-width: 100%;
   }
 }
